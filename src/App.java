@@ -10,6 +10,16 @@ public class App {
         System.out.println(line1);
         System.out.println("Length : " + line1.calculateLength());
 
+        Line line2 = getLineInput(scanner);
+        System.out.println(line2);
+        System.out.println("Length : " + line2.calculateLength());
+
+        if (line1.equals(line2)) {
+            System.out.println("Line1 is equal to Line2");
+        } else {
+            System.out.println("Line1 is not equal to Line2");
+        }
+
         scanner.close();
     }
 
