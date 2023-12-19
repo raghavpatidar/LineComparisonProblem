@@ -20,6 +20,12 @@ public class App {
             System.out.println("Line1 is not equal to Line2");
         }
 
+        if (line1.compareTo(line2)) {
+            System.out.println("Line1 Length is equal to Line2 length");
+        } else {
+            System.out.println("Line1 Length is Not equal to Line2 length");
+        }
+
         scanner.close();
     }
 

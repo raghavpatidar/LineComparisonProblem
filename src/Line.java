@@ -22,4 +22,8 @@ public class Line {
                 || (this.p1.equals(otherLine.p2) && this.p2.equals(otherLine.p1)));
     }
 
+    public boolean compareTo(Line otherLine) {
+        return this.calculateLength() == otherLine.calculateLength();
+    }
+
 }
