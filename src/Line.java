@@ -15,4 +15,15 @@ public class Line {
         return "Line [p1=" + p1 + ", p2=" + p2 + "]";
     }
 
+    public boolean equals(Line otherLine) {
+        // line (p1)--------(p2)
+        // Otherline (p1)--------(p2)
+        return ((this.p1.equals(otherLine.p1) && this.p2.equals(otherLine.p2))
+                || (this.p1.equals(otherLine.p2) && this.p2.equals(otherLine.p1)));
+    }
+
+    public boolean compareTo(Line otherLine) {
+        return this.calculateLength() == otherLine.calculateLength();
+    }
+
 }
