@@ -16,14 +16,14 @@ public class Line {
     }
 
     public boolean equals(Line otherLine) {
-        // line (p1)--------(p2)
-        // Otherline (p1)--------(p2)
+        if (this == otherLine)
+            return true;
         return ((this.p1.equals(otherLine.p1) && this.p2.equals(otherLine.p2))
                 || (this.p1.equals(otherLine.p2) && this.p2.equals(otherLine.p1)));
     }
 
-    public boolean compareTo(Line otherLine) {
-        return this.calculateLength() == otherLine.calculateLength();
+    public double compareTo(Line otherLine) {
+        return this.calculateLength() - otherLine.calculateLength();
     }
 
 }
