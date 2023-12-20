@@ -13,6 +13,8 @@ public class Point {
     }
 
     public boolean equals(Point p) {
+        if (this == p)
+            return true;
         return (this.x == p.x && this.y == p.y);
     }
 
